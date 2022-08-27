@@ -55,7 +55,7 @@ if(!isset($_SESSION['auser']))
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="row">
-							<div class="col-sm-12">
+							<div class="col-sm-12"><br></br>
 								<h3 class="page-title">Welcome Admin!</h3>
 								<p></p>
 								<ul class="breadcrumb">
@@ -150,7 +150,7 @@ if(!isset($_SESSION['auser']))
 									<h3><?php $sql = "SELECT * FROM property";
 										$query = $con->query($sql);
                 						echo "$query->num_rows";?></h3>
-										
+									
 										<h6 class="text-muted">Properties</h6>
 										<div class="progress progress-sm">
 											<div class="progress-bar bg-info w-50"></div>

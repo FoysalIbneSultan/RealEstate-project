@@ -58,7 +58,7 @@ if(!isset($_SESSION['auser']))
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="row">
-							<div class="col">
+							<div class="col"><br></br>
 								<h3 class="page-title">Contact</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
@@ -101,7 +101,7 @@ if(!isset($_SESSION['auser']))
 													
 												$query=mysqli_query($con,"select * from contact");
 												$cnt=1;
-												while($row=mysqli_fetch_row($query))
+												while($row=mysqli_fetch_row($query));
 													{
 											?>
                                                 <tr>

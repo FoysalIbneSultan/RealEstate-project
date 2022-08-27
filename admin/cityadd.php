@@ -10,11 +10,11 @@ $error="";
 $msg="";
 if(isset($_POST['insert']))
 {
-	$state=$_POST['state'];
+	// $state=$_POST['state'];
 	$city=$_POST['city'];
 	
-	if(!empty($state) && !empty($city)){
-		$sql="insert into city (cname,sid) values('$city','$state')";
+	if(!empty($city)){
+		$sql="insert into city (cname) values('$city')";
 		$result=mysqli_query($con,$sql);
 		if($result)
 			{
@@ -83,10 +83,10 @@ if(isset($_POST['insert']))
 					<div class="page-header">
 						<div class="row">
 							<div class="col">
-								<h3 class="page-title">State</h3>
+								<h3 class="page-title">City</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">State</li>
+									<li class="breadcrumb-item active">City</li>
 								</ul>
 							</div>
 						</div>
@@ -108,16 +108,16 @@ if(isset($_POST['insert']))
 								</div>
 								<form method="post" id="insert product" enctype="multipart/form-data">
 									<div class="card-body">
-											<div class="row">
+											<!-- <div class="row">
 												<div class="col-xl-6">
 													<h5 class="card-title">City Details</h5>
 													<div class="form-group row">
-														<label class="col-lg-3 col-form-label">State Name</label>
+														<label class="col-lg-3 col-form-label">CityName</label>
 														<div class="col-lg-9" >	
-															<select class="form-control" name="state">
+															<select class="form-control" name="city">
 																<option value="">Select</option>
 																<?php
-																		$query1=mysqli_query($con,"select * from state");
+																		$query1=mysqli_query($con,"select * from city");
 																		while($row1=mysqli_fetch_row($query1))
 																			{
 																	?>
@@ -125,7 +125,7 @@ if(isset($_POST['insert']))
 																<?php } ?>
 															</select>
 														</div>
-													</div>
+													</div> -->
 													<div class="form-group row">
 														<label class="col-lg-3 col-form-label">City Name</label>
 														<div class="col-lg-9">
@@ -160,20 +160,20 @@ if(isset($_POST['insert']))
                                                     <th>#</th>
                                                     <th>City</th>
 													<!-- <th>State ID</th> -->
-													<th>State</th>
+													<!-- <th>State</th> -->
 													<th>Actions</th>
                                                 </tr>
                                             </thead>
                                         
                                         
                                             <tbody>
-											<?php
+											<!-- <?php
 													
-												$query=mysqli_query($con,"select city.*,state.sname from city,state where city.sid=state.sid");
+												$query=mysqli_query($con,"select city");
 												$cnt=1;
 												while($row=mysqli_fetch_array($query))
 													{
-											?>
+											?> -->
                                                 <tr>
                                                     
                                                     <td><?php echo $cnt; ?></td>

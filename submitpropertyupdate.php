@@ -17,7 +17,7 @@ if(isset($_POST['add']))
 	$pid=$_REQUEST['id'];
 	
 	$title=$_POST['title'];
-	$content=$_POST['content'];
+	// $content=$_POST['content'];
 	$ptype=$_POST['ptype'];
 	$bhk=$_POST['bhk'];
 	$bed=$_POST['bed'];
@@ -31,10 +31,10 @@ if(isset($_POST['add']))
 	$city=$_POST['city'];
 	$asize=$_POST['asize'];
 	$loc=$_POST['loc'];
-	$state=$_POST['state'];
+	// $state=$_POST['state'];
 	$status=$_POST['status'];
 	$uid=$_SESSION['uid'];
-	$feature=$_POST['feature'];
+	// $feature=$_POST['feature'];
 	
 	$totalfloor=$_POST['totalfl'];
 	
@@ -69,9 +69,9 @@ if(isset($_POST['add']))
 	move_uploaded_file($temp_name7,"admin/property/$fimage2");
 	
 	
-	$sql = "UPDATE property SET title= '{$title}', pcontent= '{$content}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
+	$sql = "UPDATE property SET title= '{$title}', type='{$ptype}', bhk='{$bhk}', stype='{$stype}',
 	bedroom='{$bed}', bathroom='{$bath}', balcony='{$balc}', kitchen='{$kitc}', hall='{$hall}', floor='{$floor}', 
-	size='{$asize}', price='{$price}', location='{$loc}', city='{$city}', state='{$state}', feature='{$feature}',
+	size='{$asize}', price='{$price}', location='{$loc}', city='{$city}',
 	pimage='{$aimage}', pimage1='{$aimage1}', pimage2='{$aimage2}', pimage3='{$aimage3}', pimage4='{$aimage4}',
 	uid='{$uid}', status='{$status}', mapimage='{$fimage}', topmapimage='{$fimage1}', groundmapimage='{$fimage2}', 
 	totalfloor='{$totalfloor}' WHERE pid = {$pid}";
@@ -193,14 +193,14 @@ if(isset($_POST['add']))
 														<input type="text" class="form-control" name="title" required value="<?php echo $row['1']; ?>">
 													</div>
 												</div>
-												<div class="form-group row">
+												<!-- <div class="form-group row">
 													<label class="col-lg-2 col-form-label">Content</label>
 													<div class="col-lg-9">
 														<textarea class="tinymce form-control" name="content" rows="10" cols="30"><?php echo $row['2']; ?></textarea>
 													</div>
-												</div>
+												</div> -->
 												
-											</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+											</div>
 											<div class="col-xl-6">
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Property Type</label>
@@ -306,13 +306,13 @@ if(isset($_POST['add']))
 														<input type="text" class="form-control" name="city" required value="<?php echo $row['15']; ?>">
 													</div>
 												</div>
-												<div class="form-group row">
+												<!-- <div class="form-group row">
 													<label class="col-lg-3 col-form-label">State</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="state" required value="<?php echo $row['16']; ?>">
 													</div>
-												</div>
-											</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+												</div> -->
+											</div>
 											<div class="col-xl-6">
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Total Floor</label>
@@ -353,7 +353,7 @@ if(isset($_POST['add']))
 											</div>
 										</div>
 										
-										<div class="form-group row">
+										<!-- <div class="form-group row">
 											<label class="col-lg-2 col-form-label">Feature</label>
 											<div class="col-lg-9">
 											<p class="alert alert-danger">* Important Please Do Not Remove Below Content Only Change <b>Yes</b> Or <b>No</b> or Details and Do Not Add More Details</p>
@@ -364,10 +364,10 @@ if(isset($_POST['add']))
 												
 											</textarea>
 											</div>
-										</div>
+										</div> -->
 												
 										<h5 class="text-secondary">Image & Status</h5><hr>
-										<div class="row"><!-- FOR MORE PROJECTS visit: codeastro.com -->
+										<div class="row">
 											<div class="col-xl-6">
 												
 												<div class="form-group row">
@@ -457,7 +457,7 @@ if(isset($_POST['add']))
         </div>
 	<!--	Submit property   -->
         
-        <!-- FOR MORE PROJECTS visit: codeastro.com -->
+      
         <!--	Footer   start-->
 		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
@@ -468,7 +468,7 @@ if(isset($_POST['add']))
     </div>
 </div>
 <!-- Wrapper End --> 
-<!-- FOR MORE PROJECTS visit: codeastro.com -->
+
 <!--	Js Link
 ============================================================--> 
 <script src="js/jquery.min.js"></script> 

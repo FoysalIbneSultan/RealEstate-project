@@ -6,7 +6,7 @@ include("config.php");
 
 ///search code
 	
-?><!-- FOR MORE PROJECTS visit: codeastro.com -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,7 +131,7 @@ include("config.php");
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+                            </div>
                             <?php 		
 										} 
 					
@@ -163,7 +163,7 @@ include("config.php");
                                 </nav>
                             </div>  -->
                         </div>
-                    </div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+                    </div>
 					
                     <div class="col-lg-4">
                         <div class="sidebar-widget">

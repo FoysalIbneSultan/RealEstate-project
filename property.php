@@ -4,7 +4,7 @@ session_cache_limiter(false);
 session_start();
 include("config.php");
 ///code								
-?><!-- FOR MORE PROJECTS visit: codeastro.com -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@ include("config.php");
 <meta name="keywords" content="">
 <meta name="author" content="Unicoder">
 <link rel="shortcut icon" href="images/favicon.ico">
-<!-- FOR MORE PROJECTS visit: codeastro.com -->
+s
 <!--	Fonts
 	========================================================-->
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
@@ -136,7 +136,7 @@ include("config.php");
                         </div>
                     </div>
 					
-                    <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                         <div class="sidebar-widget">
                             <h4 class="double-down-line-left text-secondary position-relative pb-4 my-4">Instalment Calculator</h4>
 						<form class="d-inline-block w-100" action="calc.php" method="post">
@@ -145,7 +145,7 @@ include("config.php");
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">$</div>
                                 </div><!-- FOR MORE PROJECTS visit: codeastro.com -->
-                                <input type="text" class="form-control" name="amount" placeholder="Property Price">
+                                <!-- <input type="text" class="form-control" name="amount" placeholder="Property Price">
                             </div>
                             <label class="sr-only">Month</label>
                             <div class="input-group mb-2 mr-sm-2">
@@ -162,8 +162,8 @@ include("config.php");
                                 <input type="text" class="form-control" name="interest" placeholder="Interest Rate">
                             </div>
                             <button type="submit" value="submit" name="calc" class="btn btn-danger mt-4">Calculate Instalment</button>
-                        </form>
-                        </div>
+                        </form> -->
+                        </div> 
 
                         <h4 class="double-down-line-left text-secondary position-relative pb-4 mb-4 mt-5">Featured Property</h4>
                         <ul class="property_list_widget">

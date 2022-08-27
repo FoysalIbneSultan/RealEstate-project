@@ -97,7 +97,7 @@ if(isset($_POST['addabout']))
 					<div class="row">
 						<div class="col-md-12">
 							<div class="card">
-								<div class="card-header">
+								<div class="card-header"><br></br>
 									<h2 class="card-title">About Us</h2>
 								</div>
 								<form method="post" enctype="multipart/form-data">

@@ -25,7 +25,7 @@ include("config.php");
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
 
 <!-- Css Link -->
-<!-- FOR MORE PROJECTS visit: codeastro.com -->
+
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -34,10 +34,11 @@ include("config.php");
 <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
+<link rel="stylesheet" type="text/css" href="css/about.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <!-- Title -->
-<title>Real Estate PHP</title>
+<title>Real Estate</title>
 </head>
 <body>
 
@@ -49,7 +50,7 @@ include("config.php");
 	  </div>
 	</div>
 </div> -->
-<!-- FOR MORE PROJECTS visit: codeastro.com -->
+
 <div id="page-wrapper">
     <div class="row"> 
         <!--	Header start  -->
@@ -75,18 +76,56 @@ include("config.php");
             </div>
         </div> -->
          <!--	Banner   --->
-		 <!-- FOR MORE PROJECTS visit: codeastro.com -->
+		 
         <!--	About Our Company -->
         <div class="full-row">
             <div class="container">
+            <div class="about-section">
+
+  <h1>About Us </h1>
+  <p>Some text about who we are and what we do.</p>
+ 
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="./images/about/joydip.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Joydip Chowdhury</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <li><a href="#"><i class="fas fa-phone-alt text-success mr-1"></i>+8801775169499</a></li>
+        <li><a href="#"><i class="fas fa-envelope text-success mr-1"></i>joydip_chowdhury@realestate.com</a></li>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="./images/about/foysal.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Foysal Ibne Sultan</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <li><a href="#"><i class="fas fa-phone-alt text-success mr-1"></i>+8801641256655</a></li>
+        <li><a href="#"><i class="fas fa-envelope text-success mr-1"></i>foysal_ibne_sultan@realestate.com</a></li>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
                 
 				
-				<?php 
+				<!-- <?php 
 					
 					$query=mysqli_query($con,"SELECT * FROM about");
 					while($row=mysqli_fetch_array($query))
 					{
-				?>
+				?> -->
 				<div class="row">
                     <div class="col-md-12 col-lg-12">
                         <h3 class="double-down-line-left text-secondary position-relative pb-4 mb-4"><?php echo $row['1'];?></h3>
@@ -116,7 +155,7 @@ include("config.php");
         <!-- Scroll to top --> 
         <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
         <!-- End Scroll To top --> 
-    </div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+    </div>
 </div>
 <!-- Wrapper End --> 
 

@@ -16,7 +16,7 @@ if(isset($_POST['add']))
 {
 	
 	$title=$_POST['title'];
-	$content=$_POST['content'];
+	// $content=$_POST['content'];
 	$ptype=$_POST['ptype'];
 	$bhk=$_POST['bhk'];
 	$bed=$_POST['bed'];
@@ -30,10 +30,10 @@ if(isset($_POST['add']))
 	$city=$_POST['city'];
 	$asize=$_POST['asize'];
 	$loc=$_POST['loc'];
-	$state=$_POST['state'];
+	// $state=$_POST['state'];
 	$status=$_POST['status'];
 	$uid=$_SESSION['uid'];
-	$feature=$_POST['feature'];
+	// $feature=$_POST['feature'];
 	
 	$totalfloor=$_POST['totalfl'];
 
@@ -69,9 +69,9 @@ if(isset($_POST['add']))
 	move_uploaded_file($temp_name6,"admin/property/$fimage1");
 	move_uploaded_file($temp_name7,"admin/property/$fimage2");
 	
-	$sql="insert into property (title,pcontent,type,bhk,stype,bedroom,bathroom,balcony,kitchen,hall,floor,size,price,location,city,state,feature,pimage,pimage1,pimage2,pimage3,pimage4,uid,status,mapimage,topmapimage,groundmapimage,totalfloor, isFeatured)
-	values('$title','$content','$ptype','$bhk','$stype','$bed','$bath','$balc','$kitc','$hall','$floor','$asize','$price',
-	'$loc','$city','$state','$feature','$aimage','$aimage1','$aimage2','$aimage3','$aimage4','$uid','$status','$fimage','$fimage1','$fimage2','$totalfloor', '$isFeatured')";
+	$sql="insert into property (title,type,bhk,stype,bedroom,bathroom,balcony,kitchen,hall,floor,size,price,location,city,pimage,pimage1,pimage2,pimage3,pimage4,uid,status,mapimage,topmapimage,groundmapimage,totalfloor, isFeatured)
+	values('$title','$ptype','$bhk','$stype','$bed','$bath','$balc','$kitc','$hall','$floor','$asize','$price',
+	'$loc','$city','$aimage','$aimage1','$aimage2','$aimage3','$aimage4','$uid','$status','$fimage','$fimage1','$fimage2','$totalfloor', '$isFeatured')";
 	$result=mysqli_query($con,$sql);
 	if($result)
 		{
@@ -114,7 +114,7 @@ if(isset($_POST['add']))
 <link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/login.css">
-<!-- FOR MORE PROJECTS visit: codeastro.com -->
+
 <!--	Title
 	=========================================================-->
 <title>Real Estate PHP</title>
@@ -182,13 +182,13 @@ if(isset($_POST['add']))
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="title" required placeholder="Enter Title">
 													</div>
-												</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
-												<div class="form-group row">
+												</div>
+												<!-- <div class="form-group row">
 													<label class="col-lg-2 col-form-label">Content</label>
 													<div class="col-lg-9">
 														<textarea class="tinymce form-control" name="content" rows="10" cols="30"></textarea>
 													</div>
-												</div>
+												</div> -->
 												
 											</div>
 											<div class="col-xl-6">
@@ -215,7 +215,7 @@ if(isset($_POST['add']))
 															<option value="sale">Sale</option>
 														</select>
 													</div>
-												</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Bathroom</label>
 													<div class="col-lg-9">
@@ -252,7 +252,7 @@ if(isset($_POST['add']))
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="bed" required placeholder="Enter Bedroom  (only no 1 to 10)">
 													</div>
-												</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+												</div>
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Balcony</label>
 													<div class="col-lg-9">
@@ -266,7 +266,7 @@ if(isset($_POST['add']))
 													</div>
 												</div>
 												
-											</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+											</div>
 										</div>
 										<h5 class="text-secondary">Price & Location</h5><hr>
 										<div class="row">
@@ -296,13 +296,13 @@ if(isset($_POST['add']))
 														<input type="text" class="form-control" name="city" required placeholder="Enter City">
 													</div>
 												</div>
-												<div class="form-group row">
+												<!-- <div class="form-group row">
 													<label class="col-lg-3 col-form-label">State</label>
 													<div class="col-lg-9">
 														<input type="text" class="form-control" name="state" required placeholder="Enter State">
 													</div>
-												</div>
-											</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+												</div> -->
+											</div>
 											<div class="col-xl-6">
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label">Total Floor</label>
@@ -340,25 +340,25 @@ if(isset($_POST['add']))
 													</div>
 												</div>
 												
-											</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+											</div>
 										</div>
 										
-										<div class="form-group row">
+										<!-- <div class="form-group row">
 											<label class="col-lg-2 col-form-label">Feature</label>
 											<div class="col-lg-9">
 											<p class="alert alert-danger">* Important Please Do Not Remove Below Content Only Change <b>Yes</b> Or <b>No</b> or Details and Do Not Add More Details</p>
 											
-											<textarea class="tinymce form-control" name="feature" rows="10" cols="30">
+											<textarea class="tinymce form-control" name="feature" rows="10" cols="30"> -->
 												<!---feature area start--->
-												<div class="col-md-4">
+												<!-- <div class="col-md-4">
 														<ul>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Property Age : </span>10 Years</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Swiming Pool : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Parking : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">GYM : </span>Yes</li>
 														</ul>
-													</div>
-													<div class="col-md-4">
+													</div> -->
+													<!-- <div class="col-md-4">
 														<ul>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Type : </span>Apartment</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Security : </span>Yes</li>
@@ -366,19 +366,19 @@ if(isset($_POST['add']))
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Church/Temple  : </span>No</li>
 														
 														</ul>
-													</div>
-													<div class="col-md-4">
+													</div> -->
+													<!-- <div class="col-md-4">
 														<ul>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">3rd Party : </span>No</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Elevator : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">CCTV : </span>Yes</li>
 														<li class="mb-3"><span class="text-secondary font-weight-bold">Water Supply : </span>Ground Water / Tank</li>
 														</ul>
-													</div>
+													</div> -->
 												<!---feature area end---->
-											</textarea>
-											</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
-										</div>
+											<!-- </textarea>
+											</div>
+										<!-- </div>  -->
 												
 										<h5 class="text-secondary">Image & Status</h5><hr>
 										<div class="row">
@@ -416,7 +416,7 @@ if(isset($_POST['add']))
 													<label class="col-lg-3 col-form-label">Basement Floor Plan Image</label>
 													<div class="col-lg-9">
 														<input class="form-control" name="fimage1" type="file">
-													</div><!-- FOR MORE PROJECTS visit: codeastro.com -->
+													</div>
 												</div>
 											</div>
 											<div class="col-xl-6">
@@ -451,7 +451,7 @@ if(isset($_POST['add']))
 
 										<hr>
 
-										<div class="row"><!-- FOR MORE PROJECTS visit: codeastro.com -->
+										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group row">
 													<label class="col-lg-3 col-form-label"><b>Is Featured?</b></label>
@@ -487,7 +487,7 @@ if(isset($_POST['add']))
     </div>
 </div>
 <!-- Wrapper End --> 
-<!-- FOR MORE PROJECTS visit: codeastro.com -->
+
 <!--	Js Link
 ============================================================--> 
 <script src="js/jquery.min.js"></script> 

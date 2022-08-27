@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 require("config.php");
 ////code
@@ -7,7 +7,7 @@ if(!isset($_SESSION['auser']))
 {
 	header("location:index.php");
 }
-?>  
+?>   -->
   <div class="header">
 			
 				<!-- Logo -->
@@ -38,7 +38,7 @@ if(!isset($_SESSION['auser']))
 
 					
 					<!-- User Menu -->
-					<!-- <h4 style="color:white;margin-top:13px;text-transform:capitalize;"><?php echo $_SESSION['auser'];?></h4> -->
+					<h4 style="color:white;margin-top:13px;text-transform:capitalize;"><?php echo $_SESSION['auser'];?></h4>
 					<li class="nav-item dropdown app-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
 							<span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.png" width="31" alt="Ryan Taylor"></span>
@@ -109,13 +109,13 @@ if(!isset($_SESSION['auser']))
 							</li>
 
 							<li class="menu-title"> 
-								<span>State & City</span>
+								<span>City</span>
 							</li>
 						
 							<li class="submenu">
-								<a href="#"><i class="fe fe-location"></i> <span>State & City</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fe fe-location"></i> <span>City</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="stateadd.php"> State </a></li>
+									<!-- <li><a href="stateadd.php"> State </a></li> -->
 									<li><a href="cityadd.php"> City </a></li>
 								</ul>
 							</li>
@@ -134,7 +134,7 @@ if(!isset($_SESSION['auser']))
 							
 							
 							
-							<li class="menu-title"> 
+							<!-- <li class="menu-title"> 
 								<span>Query</span>
 							</li>
 							<li class="submenu">
@@ -154,7 +154,7 @@ if(!isset($_SESSION['auser']))
 									<li><a href="aboutview.php"> View About </a></li>
 								</ul>
 							</li>
-							
+							 -->
 						</ul>
 					</div>
                 </div>
